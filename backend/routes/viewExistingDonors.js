@@ -7,7 +7,7 @@ router.route('/').get((req, res) => {
     const creds = require('../credentials.json')
 
     async function accessSpreadsheet() {
-        const doc = new GoogleSpreadsheet('1KD3P2WythFJxihP53IeCAUs1h7I36jCBcpR5IcSogdM')
+        const doc = new GoogleSpreadsheet(process.env.SHEET_ID)
         await promisify(doc.useServiceAccountAuth)(creds)
         const info = await promisify(doc.getInfo)()
         const sheet = info.worksheets[0]
