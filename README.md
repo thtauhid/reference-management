@@ -28,7 +28,6 @@ Adding New Donor: http://localhost:4500/addNewDonor [POST]
 
 `
 {
-
 	"bloodgroup": "",
 	
 	"donorname": "",
@@ -38,7 +37,6 @@ Adding New Donor: http://localhost:4500/addNewDonor [POST]
 	"location": "",
 	
 	"lastdonation": ""
-	
 }
 `
 
