@@ -52,7 +52,7 @@ export default class ViewExistingDonors extends Component {
 							<th scope="col">Last Donation</th>
 						</tr>
 					</thead>
-					<tbody className>
+					<tbody>
 						{this.DonorList()}
 					</tbody>
 				</table>
