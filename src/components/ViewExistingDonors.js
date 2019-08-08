@@ -8,7 +8,7 @@ const Donor = props => (
 		<td>{props.data.donorname}</td>
 		<td>{props.data.contactno}</td>
 		<td>{props.data.location}</td>
-		<td>{props.data.lastdonation}</td>
+		<td>{props.data.lastdonation.substring(0, 10)}</td>
 	</tr>
 )
 export default class ViewExistingDonors extends Component {
@@ -16,6 +16,7 @@ export default class ViewExistingDonors extends Component {
         super(props)
 
         this.state = {
+            preloader: "Loading...",
             donorData: []
         }
     }
@@ -24,7 +25,8 @@ export default class ViewExistingDonors extends Component {
         axios.get('http://localhost:4500/viewExistingDonors')
             .then(response => {
                 this.setState({
-                    donorData: response.data
+                    donorData: response.data,
+                    preloader: ''
                 })
             })
             .catch(err => console.log('Error' + err))
@@ -54,6 +56,7 @@ export default class ViewExistingDonors extends Component {
 						{this.DonorList()}
 					</tbody>
 				</table>
+                {this.state.preloader}
 			</div>
         )
     }
