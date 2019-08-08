@@ -20,9 +20,9 @@
 ## Functionalities:
 
 
-### API Reference
+## API Reference
 
-## Back End: 
+### Back End: 
 
 Adding New Donor: http://localhost:4500/addNewDonor [POST]
 `
