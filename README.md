@@ -25,23 +25,34 @@
 ### Back End: 
 
 Adding New Donor: http://localhost:4500/addNewDonor [POST]
+
 `
 {
+
 	"bloodgroup": "",
+	
 	"donorname": "",
+	
 	"contactno": "",
+	
 	"location": "",
+	
 	"lastdonation": ""
+	
 }
 `
+
 Viewing Existing Donors: http://localhost:4500/viewExistingDonors [GET]
+
 `
 {}
 `
 
 
 Use .env file for the below variables-
+
 `
 PORT
+
 SHEET_ID
 `
