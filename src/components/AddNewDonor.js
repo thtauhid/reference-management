@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
 
 export default class AddNewDonor extends Component {
     constructor(props) {
@@ -42,9 +44,9 @@ export default class AddNewDonor extends Component {
             location: e.target.value
         })
     }
-    onChangeLastDonation(e) {
+    onChangeLastDonation(date) {
         this.setState({
-            lastdonation: e.target.value
+            lastdonation: date
         })
     }
     onSubmit(e) {
@@ -104,12 +106,8 @@ export default class AddNewDonor extends Component {
 					onChange={this.onChangeLocation} />
 
 					<label>Last Donation</label>
-					<input type="text" 
-					required 
-					className="form-control" 
-					value={this.state.lastdonation} 
-					onChange={this.onChangeLastDonation} />
-
+                    <DatePicker selected={this.state.lastdonation} onChange={this.onChangeLastDonation} dateFormat="d MMMM, yyyy" />
+					
 					<input type="submit" value="Add New Donor" className="btn btn-primary"/>
 				</form>
 			</div>
