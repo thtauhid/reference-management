@@ -24,7 +24,7 @@
 
 ### Back End: 
 
-Adding New Donor: http://localhost:4500/addNewDonor [POST]
+1. Adding New Donor: http://localhost:4500/addNewDonor [POST]
 
 ```
 {
@@ -36,14 +36,31 @@ Adding New Donor: http://localhost:4500/addNewDonor [POST]
 }
 ```
 
-Viewing Existing Donors: http://localhost:4500/viewExistingDonors [GET]
+2. Viewing Existing Donors: http://localhost:4500/viewExistingDonors [GET]
 
 `{}`
 
 
-Use .env file for the below variables-
+3. Use .env file for the below variables-
 
 ```
 PORT
 SHEET_ID
 ```
+
+### Front End:
+Adding New Donor:
+Viewing Existing Donors:
+
+## Road Map
+
+### Web App
+1. Add Donation Date
+2. Edit Donor Details
+3. Delete Donor
+4. Retire Donor
+5. Make things more configurable
+
+### Mobile App
+1. Needs more thinking...
+2. Will use React Native
