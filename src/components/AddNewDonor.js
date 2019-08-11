@@ -60,7 +60,7 @@ export default class AddNewDonor extends Component {
             lastdonation: this.state.lastdonation
         }
 
-        axios.post('http://localhost:4500/addNewDonor', newDonor)
+        axios.post('http://blood-backend.tauhid.xyz:14001/addNewDonor', newDonor)
             .then(res => console.log(res.data))
 
         this.setState({
@@ -105,9 +105,10 @@ export default class AddNewDonor extends Component {
 					value={this.state.location} 
 					onChange={this.onChangeLocation} />
 
-					<label>Last Donation</label>
-                    <DatePicker selected={this.state.lastdonation} onChange={this.onChangeLastDonation} dateFormat="d MMMM, yyyy" />
-					
+					<label>Last Donation</label><br/>
+                    <DatePicker selected={this.state.lastdonation} onChange={this.onChangeLastDonation} dateFormat="d MMMM, yyyy" className="form-control" />
+					<br/>
+                    <br/>
 					<input type="submit" value="Add New Donor" className="btn btn-primary"/>
 				</form>
 			</div>
