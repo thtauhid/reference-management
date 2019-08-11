@@ -1,3 +1,9 @@
+## Live:
+
+Frontend: http://blood-frontend.tauhid.xyz:10001
+Backend: http://blood-backend.tauhid.xyz:14001
+Spreadsheet: https://drive.google.com/open?id=1Cq5J67SgadclBfp-z1Va1V0i99nZwJpET-02YoMkIqI
+
 ## Technologies Used:
 
 ### Front End:
@@ -24,7 +30,7 @@
 
 ### Back End: 
 
-1. Adding New Donor: http://localhost:4500/addNewDonor [POST]
+1. Adding New Donor: http://<YOUR DOMAIN>:<PORT>/addNewDonor [POST]
 
 ```
 {
@@ -36,7 +42,7 @@
 }
 ```
 
-2. Viewing Existing Donors: http://localhost:4500/viewExistingDonors [GET]
+2. Viewing Existing Donors: http://<YOUR DOMAIN>:<PORT>/viewExistingDonors [GET]
 
 `{}`
 
