@@ -49,7 +49,17 @@ Spreadsheet: https://drive.google.com/open?id=1Cq5J67SgadclBfp-z1Va1V0i99nZwJpET
 `{}`
 
 
-3. Use .env file for the below variables-
+3. Adding Donation: http://YOUR_DOMAIN:PORT/newDonation [POST] 
+
+```
+{
+	"donorid": "",
+	"donationtime": "",
+	"placeofdonation": ""
+}
+```
+
+4. Use .env file for the below variables-
 
 ```
 PORT
@@ -63,11 +73,10 @@ Viewing Existing Donors:
 ## Road Map
 
 ### Web App
-1. Add Donation Date
-2. Edit Donor Details
-3. Delete Donor
-4. Retire Donor
-5. Make things more configurable
+1. Edit Donor Details
+2. Delete Donor
+3. Retire Donor
+4. Make things more configurable
 
 ### Mobile App
 1. Needs more thinking...
