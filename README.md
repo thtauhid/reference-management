@@ -75,8 +75,8 @@ SHEET_ID
 ```
 
 ### Front End:
-Adding New Donor:
-Viewing Existing Donors:
+1. Adding New Donor:
+2. Viewing Existing Donors:
 
 ## Road Map
 
