@@ -59,7 +59,15 @@ Spreadsheet: https://drive.google.com/open?id=1Cq5J67SgadclBfp-z1Va1V0i99nZwJpET
 }
 ```
 
-4. Use .env file for the below variables-
+4. Donor Profile:
+
+```
+{
+	"donorid": ""
+}
+```
+
+5. Use .env file for the below variables-
 
 ```
 PORT
