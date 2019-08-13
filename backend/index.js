@@ -12,11 +12,13 @@ const addNewDonor = require('./routes/addNewDonor')
 const viewExistingDonors = require('./routes/viewExistingDonors')
 const newDonation = require('./routes/newDonation')
 const donorProfile = require('./routes/donorProfile')
+const deleteDonor = require('./routes/deleteDonor')
 
 app.use('/addNewDonor', addNewDonor)
 app.use('/viewExistingDonors', viewExistingDonors)
 app.use('/newDonation', newDonation)
 app.use('/donorProfile', donorProfile)
+app.use('/deleteDonor', deleteDonor)
 
 app.listen(port, () => {
     console.log(`App started on port ${port}`)
