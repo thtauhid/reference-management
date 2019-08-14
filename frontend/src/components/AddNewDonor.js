@@ -60,7 +60,7 @@ export default class AddNewDonor extends Component {
             lastdonation: this.state.lastdonation
         }
 
-        axios.post('http://blood-backend.tauhid.xyz:14001/addNewDonor', newDonor)
+        axios.post('http://backend:5000/addNewDonor', newDonor)
             .then(res => console.log(res.data))
 
         this.setState({

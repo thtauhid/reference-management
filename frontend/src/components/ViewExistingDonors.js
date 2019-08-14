@@ -22,7 +22,7 @@ export default class ViewExistingDonors extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://blood-backend.tauhid.xyz:14001/viewExistingDonors')
+        axios.get('http://backend:5000/viewExistingDonors')
             .then(response => {
                 this.setState({
                     donorData: response.data,
