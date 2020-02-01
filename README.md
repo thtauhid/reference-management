@@ -1,4 +1,4 @@
-Still in active development.
+Making things serverless...
 
 ## Technologies Used:
 
