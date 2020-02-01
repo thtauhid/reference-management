@@ -1,8 +1,0 @@
-version: '1'
-services: 
-  app: 
-    container_name: reactapp
-    restart: always
-    build: .
-    ports:
-      - '3000:3000'
