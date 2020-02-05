@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-const Donor = props => (
-    <tr>
+const Donor = (props) => (
+	<tr>
 		<td>{props.data.donorid}</td>
 		<td>{props.data.bloodgroup}</td>
 		<td>{props.data.donorname}</td>
@@ -12,35 +12,36 @@ const Donor = props => (
 	</tr>
 )
 export default class ViewExistingDonors extends Component {
-    constructor(props) {
-        super(props)
+	constructor(props) {
+		super(props)
 
-        this.state = {
-            preloader: "Loading...",
-            donorData: []
-        }
-    }
+		this.state = {
+			preloader : 'Loading...',
+			donorData : []
+		}
+	}
 
-    componentDidMount() {
-        axios.get('http://backend:5000/viewExistingDonors')
-            .then(response => {
-                this.setState({
-                    donorData: response.data,
-                    preloader: ''
-                })
-            })
-            .catch(err => console.log('Error' + err))
-    }
+	componentDidMount() {
+		axios
+			.get('http://localhost:9000/viewExistingDonors')
+			.then((response) => {
+				this.setState({
+					donorData : response.data,
+					preloader : ''
+				})
+			})
+			.catch((err) => console.log('Error' + err))
+	}
 
-    DonorList() {
-        return this.state.donorData.map(data => {
-            return <Donor data={data} key={data.donorid} />
-        })
-    }
+	DonorList() {
+		return this.state.donorData.map((data) => {
+			return <Donor data={data} key={data.donorid} />
+		})
+	}
 
-    render() {
-        return (
-            <div>
+	render() {
+		return (
+			<div>
 				<table className="table table-striped table-bordered table-hover">
 					<thead className="thead-dark">
 						<tr>
@@ -52,12 +53,10 @@ export default class ViewExistingDonors extends Component {
 							<th scope="col">Last Donation</th>
 						</tr>
 					</thead>
-					<tbody>
-						{this.DonorList()}
-					</tbody>
+					<tbody>{this.DonorList()}</tbody>
 				</table>
-                {this.state.preloader}
+				{this.state.preloader}
 			</div>
-        )
-    }
+		)
+	}
 }

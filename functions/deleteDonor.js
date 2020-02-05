@@ -2,6 +2,7 @@
 const GoogleSpreadsheet = require('google-spreadsheet')
 const { promisify } = require('util')
 const creds = require('../credentials.json')
+require('dotenv').config()
 
 exports.handler = function(event, context, callback) {
 	//
@@ -25,7 +26,7 @@ exports.handler = function(event, context, callback) {
 		if (rows.length == 1) {
 			rows[0].del()
 			send('Donor Deleted!')
-			console.log('Donor Added!')
+			console.log('Donor Deleted!')
 		}
 		else {
 			send('Donor not found!')

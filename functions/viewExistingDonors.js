@@ -2,7 +2,7 @@
 const GoogleSpreadsheet = require('google-spreadsheet')
 const { promisify } = require('util')
 const creds = require('../credentials.json')
-
+require('dotenv').config()
 exports.handler = function(event, context, callback) {
 	//
 	const send = (body) =>
